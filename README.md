@@ -2,10 +2,10 @@
 
 
 ## 실행 
-1. Node.js 설치
-  - https://nodejs.org/en //node.js 설치 
-2. clone 후에 초기화 -> "npm init -y"
-3. 실행명령어 -> "nodemon server.js"
+  1. Node.js 설치
+    - https://nodejs.org/en //node.js 설치 
+  2. clone 후에 초기화 -> `$ npm init -y`
+  3. 실행명령어 -> `$ nodemon server.js`
 
 
 ## 변경사항
@@ -24,7 +24,7 @@
      - firebase 프로젝트 만들어 놓음
      - 액세스 권한 수리 해야함
   2. 이미지 API
-     - firebase storage에 저장
+     - 받아와서 firebase storage에 저장
 
 
 *2024-05-30*
