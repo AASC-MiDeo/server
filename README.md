@@ -14,9 +14,9 @@
   3. nodemon 설치 해놨으니까 `$ nodemon server.js` 로 실행해주세요
      - nodemon 으로 실행 시에 파일 수정하면 재시작할 필요 없이 즉각 변동
   4. HTTP post 테스팅용 파일 작성 
-  - testing.js
+    - testing.js
   5. node_modules 폴더 전체가 올라가지 않도록 .gitignore 작성해놨음
-  - `$ git add * `
+    - `$ git add * `
 
 
 ## 이후 백에서 진행해야할 Task 정리
