@@ -1,22 +1,24 @@
 const config = require('./config');
 
 function checkWarnings(helmet, temperature, sound, gas) {
+    const conditions = [
+        { condition: helmet === 0, message: "Helmet is not worn!", errorCode: config._HELMET_WARNING },
+        { condition: temperature > config.TEMPERATURE_THRESHOLD, message: `Temperature exceeded ${config.TEMPERATURE_THRESHOLD}°C!`, errorCode: config._TEMPERATURE_WARNING },
+        { condition: sound > config.SOUND_THRESHOLD, message: `Sound level exceeded ${config.SOUND_THRESHOLD}dB!`, errorCode: config._SOUND_WARNING },
+        { condition: gas > config.GAS_THRESHOLD, message: `Gas concentration exceeded ${config.GAS_THRESHOLD}ppm!`, errorCode: config._GAS_WARNING }
+    ];
+
+    let errNum = [];
     let warnings = [];
 
-    if (helmet === 0) {
-        warnings.push("Helmet is not worn!");
-    }
-    if (temperature > config.TEMPERATURE_THRESHOLD) {
-        warnings.push(`Temperature exceeded ${config.TEMPERATURE_THRESHOLD}°C!`);
-    }
-    if (sound > config.SOUND_THRESHOLD) {
-        warnings.push(`Sound level exceeded ${config.SOUND_THRESHOLD}dB!`);
-    }
-    if (gas > config.GAS_THRESHOLD) {
-        warnings.push(`Gas concentration exceeded ${config.GAS_THRESHOLD}ppm!`);
-    }
+    conditions.forEach(({ condition, message, errorCode }) => {
+        if (condition) {
+            warnings.push(message);
+            errNum.push(errorCode);
+        }
+    });
 
-    return warnings;
+    return [errNum, warnings];
 }
 
 module.exports = checkWarnings;
