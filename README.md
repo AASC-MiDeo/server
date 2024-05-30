@@ -18,9 +18,8 @@
 
 
 ##실행 
-1. Node.js + express 설치
+1. Node.js 설치
   - https://nodejs.org/en //node.js 설치 
-  - $ npm install express --save //express 설치
 2. clone 후에 초기화 -> "npm init -y"
 3. 실행명령어 -> "node server.js"
 
