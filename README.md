@@ -3,9 +3,10 @@
 
 ## 실행 
   1. Node.js 설치
-    - https://nodejs.org/en //node.js 설치 
-  2. clone 후에 초기화 -> `$ npm init -y`
-  3. 실행명령어 -> `$ nodemon server.js`
+    - https://nodejs.org/en //node.js 설치
+  2. express 설치 :  `$ npm install express`
+  3. 초기화 : `$ npm init -y`
+  4. 실행명령어 -> `$ nodemon server.js`
 
 
 ## 변경사항
